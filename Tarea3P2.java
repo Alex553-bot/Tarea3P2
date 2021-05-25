@@ -27,7 +27,7 @@ public class Tarea3{
 
         matris = new boolean [matrix.length][matrix.length];
 
-        while(num<=(matrix.length*matrix.length)){
+        while(PosInicial <= PosFinal){
             for(int col = 0; col<matrix[0].length; col++){
                 if(matris[PosInicial][col] == false){
                     matrix [PosInicial][col] = num;
