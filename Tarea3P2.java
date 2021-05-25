@@ -1,5 +1,3 @@
-// tarea 3 p2
-
 import java.util.ArrayList;
 
 public class Tarea3{
@@ -22,7 +20,7 @@ public class Tarea3{
 	}
 
 	public void caracol(){
-		int num = 1;
+	int num = 1;
         boolean[][] matris;
         int PosInicial = 0;
         int PosFinal = matrix.length-1;
@@ -64,33 +62,31 @@ public class Tarea3{
             PosInicial++;
             PosFinal--;
         }
-	}
+    }
 
     public void Diagonales(){
-        ArraList[] principal;
-        ArraList[] secundaria;
-        int contador = 0;
-        int fila = 0;
-        int col = 0;
+        ArrayList <Integer> principal;
+        ArrayList <Integer> secundaria;
+        int contador;
 
-        principal = new ArrayList[Integer];
-        secundaria = new ArrayList[Integer];
+        principal = new ArrayList <Integer>();
+        secundaria = new ArrayList <Integer>();
 
 
         for(int i = 0 ; i < matrix.length; i++){
-            principal[i] = matrix[i][i];
-            contador++;
+            principal.add(matrix[i][i]);
         }
 
         contador = matrix.length-1;   
 
         for(int i = 0; i < matrix.length; i++){
-            secundaria [i] = matrix[contador][i];
+            secundaria.add(matrix[contador][i]);
+	    contador--;
         }
     
-        System.out.println("diagonal principal \n")
+        System.out.println("diagonal principal \n");
         System.out.println(principal + "\n");
-        System.out.println("diagonal secundaria \n")
+        System.out.println("diagonal secundaria \n");
         System.out.println(secundaria);
     }
 }
